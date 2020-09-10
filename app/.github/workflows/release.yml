@@ -1,0 +1,36 @@
+on:
+  push:
+    tags:
+      - v*
+      - iteration*
+name: Release
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cedx/setup-dart@v1
+      - uses: actions/checkout@v1
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'dev'
+      - run: dart tool/env.dart
+        env:
+          FINESSE_API_TOKEN: ${{ secrets.FINESSE_API_TOKEN }}
+          FINESSE_SERVER_KEY: ${{ secrets.FINESSE_SERVER_KEY }}
+      - run: flutter build apk --split-per-abi
+      - run: flutter config --enable-web
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/release/*.apk"
+          token: ${{ secrets.TOKEN }}
+      - run: flutter build web
+      - uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: build/web

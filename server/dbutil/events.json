@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Google Seminar",
+    "description": "Seminar by Google about Flutter. Will have healthy donuts and pizza.",
+    "location": "Seibel Center",
+    "duration": "2 hrs"
+  },
+  {
+    "name": "Facebook Seminar",
+    "description": "Seminar by Facebook about ReactJS. Will have fried foods.",
+    "location": "ECE Building",
+    "duration": "1.5 hrs"
+  }
+]

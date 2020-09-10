@@ -1,0 +1,20 @@
+name: Dart Analysis
+on: [push]
+
+jobs:
+
+  package-analysis:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "10000% looks good"
+#      - uses: cedx/setup-dart@v1
+#      - uses: actions/checkout@v2 # required
+#      - run: dart tool/env.dart
+#        env:
+#          FINESSE_API_TOKEN: ${{ secrets.FINESSE_API_TOKEN }}
+#      - uses: axel-op/dart-package-analyzer/with-full-sdk@stable
+#        with:
+#          # Required:
+#          githubToken: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,12 @@
+#ignore nodemodules
+node_modules/
+.idea/**
+.vscode
+dist
+*.log
+yarn.lock
+.env
+.DS_Store
+.nyc_output/
+coverage/
+src/doc/**

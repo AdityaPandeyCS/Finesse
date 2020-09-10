@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "829235703292",
+    "firebase_url": "https://finesse-nation-uiuc.firebaseio.com",
+    "project_id": "finesse-nation-uiuc",
+    "storage_bucket": "finesse-nation-uiuc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829235703292:android:f823c1b948f220b5c91679",
+        "android_client_info": {
+          "package_name": "com.periphery.finesse_nation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829235703292-esgf0l4264qqepa18o9ul1pqd3plmhqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj5fPboMnNUVmWBtQnThPcGKA8XK-kW98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829235703292-esgf0l4264qqepa18o9ul1pqd3plmhqq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

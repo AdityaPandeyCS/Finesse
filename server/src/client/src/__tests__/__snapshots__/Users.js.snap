@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Password reset page It should load password reset page with invalid token message 1`] = `
+<div
+  className="container"
+>
+  <h3>
+    Error: Email/Token invalid or token has expired. Please retry password reset request.
+  </h3>
+</div>
+`;

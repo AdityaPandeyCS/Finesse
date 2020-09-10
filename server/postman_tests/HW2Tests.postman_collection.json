@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "ded767b2-dee6-4a37-9d94-525644286313",
+		"name": "HW2Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Success User Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "028b404c-cae9-4ffd-acc1-a4d7f2e6c45c",
+						"exec": [
+							"pm.test(\"Status Code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\":\"shilpa\",\n\"password\":\"pass123\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/username=shilpa&password=pass123",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"username=shilpa&password=pass123"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/username=shilpa&password=pass123",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"username=shilpa&password=pass123"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\"message\":\"user successfully logged in\"}"
+				}
+			]
+		},
+		{
+			"name": "Unauthorised User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "988a18cd-c57f-40de-a5da-376e08f5b70a",
+						"exec": [
+							"pm.test(\"Status Code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\":\"shilpa\",\n\"password\":\"pass567\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/username=shilpa&password=pass567",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"username=shilpa&password=pass567"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/username=shilpa&password=pass567",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"username=shilpa&password=pass567"
+							]
+						}
+					},
+					"code": 401,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\"message\":\"Please enter the correct username or password\"}"
+				}
+			]
+		},
+		{
+			"name": "User Account Creation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "de1d7eae-7651-4e8d-8bee-3d94c6a1f894",
+						"exec": [
+							"pm.test(\"Status Code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\":\"shilpa\",\n\"password\":\"pass123\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\"message\":\"user account created successfully\"}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

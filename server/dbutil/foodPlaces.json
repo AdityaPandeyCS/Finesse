@@ -1,0 +1,20 @@
+[
+  {
+    "city": "Champaign",
+    "state": "IL",
+    "buildings": [
+      "ECE Building",
+      "Siebel Center",
+      "DCL Building"
+    ]
+  },
+  {
+    "city": "Ann Harbor",
+    "state": "MI",
+    "buildings": [
+      "Michigan Union",
+      "East Quadrangle",
+      "West Hall"
+    ]
+  }
+]

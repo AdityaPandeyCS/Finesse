@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page It should load home admin page 1`] = `
+<div>
+  <p>
+    Site used for administrative uses only.
+  </p>
+</div>
+`;

@@ -1,0 +1,31 @@
+dartdoc:
+  exclude:
+    - .env
+    - animated_button
+    - animated_text
+    - animated_text_form_field
+    - auth
+    - auth_card
+    - color_helper
+    - color_helpers
+    - constants
+    - custom_page_transformer
+    - dart_helper
+    - expandable_container
+    - fade_in
+    - generated_plugin_registrant
+    - gradient_box
+    - hero_text
+    - login_data
+    - login_messages
+    - login_theme
+    - math_helper
+    - matrix
+    - null_widget
+    - paddings
+    - regex
+    - ring
+    - shadow_button
+    - theme
+    - widget_helper
+    - widgets
